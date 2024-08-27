@@ -3,116 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XyBot - AI Solutions</title>
+    <title>XyBot - AI Neurons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
             color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f5f5f5;
         }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         header {
-            background-color: #4a90e2;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-bottom: 2rem;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #10a37f;
+        }
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        .hero {
+            padding: 6rem 0 4rem;
+            text-align: center;
+            background-color: #fff;
         }
         h1 {
-            margin: 0;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #10a37f;
         }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 2rem;
         }
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            width: calc(33% - 20px);
-        }
-        @media (max-width: 768px) {
-            .card {
-                width: 100%;
-            }
-        }
-        .btn {
+        .cta-button {
             display: inline-block;
-            background-color: #4a90e2;
-            color: white;
-            padding: 10px 20px;
+            background-color: #10a37f;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
         }
-        .btn:hover {
-            background-color: #3a7bc8;
-        }
-        .auth-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .auth-btn {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 5px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .auth-btn:hover {
-            background-color: white;
-            color: #4a90e2;
+        .cta-button:hover {
+            background-color: #0c8c6a;
         }
         footer {
+            background-color: #f0f0f0;
+            padding: 1rem 0;
             text-align: center;
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #4a90e2;
-            color: white;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>XyBot - AI Solutions</h1>
-        <div class="auth-buttons">
-            <a href="#" class="auth-btn">Sign In</a>
-            <a href="#" class="auth-btn">Log In</a>
+        <div class="container">
+            <nav>
+                <div class="logo">XyBot</div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
         </div>
     </header>
+
     <main>
-        <div class="container">
-            <div class="card">
-                <h2>XyChat</h2>
-                <p>Advanced conversational AI capable of understanding and generating human-like text.</p>
-                <a href="#" class="btn">Learn More</a>
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to XyBot</h1>
+                <p class="subtitle">Empowering businesses with cutting-edge AI solutions for enhanced productivity and innovation.</p>
+                <a href="#get-started" class="cta-button">Get Started</a>
             </div>
-            <div class="card">
-                <h2>XyVision</h2>
-                <p>AI system that creates realistic images and art from natural language descriptions.</p>
-                <a href="#" class="btn">Explore</a>
-            </div>
-            <div class="card">
-                <h2>XyCode</h2>
-                <p>AI system that translates natural language to code, assisting developers in various tasks.</p>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </div>
+        </section>
+        <!-- Add more sections for features, pricing, about, etc. -->
     </main>
+
     <footer>
-        <p>&copy; 2023 XyBot. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 XyBot AI Solutions. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        // Update copyright year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            document.querySelector('footer p').innerHTML = `&copy; ${currentYear} XyBot AI Solutions. All Rights Reserved.`;
+        });
+    </script>
 </body>
 </html>
 
